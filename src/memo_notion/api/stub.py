@@ -1,4 +1,3 @@
-from fastapi.testclient import TestClient
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -8,7 +7,6 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-# 以下に、他のAPIエンドポイントを追加していきます。
 @app.post("/register")
 async def register():
     # 本当のユーザー登録処理はここに実装されますが、
